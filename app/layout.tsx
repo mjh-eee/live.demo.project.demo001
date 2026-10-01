@@ -19,6 +19,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://skincraft-bd.com'),
   title: {
     default: 'Skin Craft Laser & Aesthetics | Premium Skin & Laser Clinic in Dhaka',
     template: '%s | Skin Craft Laser & Aesthetics',

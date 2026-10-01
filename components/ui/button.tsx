@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'gold' | 'light' | 'dark' | 'icon';
-export type ButtonSize = 'sm' | 'md' | 'lg' | 'icon';
+export type ButtonSize = 'sm' | 'md' | 'lg' | 'icon' | 'default';
 
 interface ButtonLinkProps {
   href: string;
@@ -17,7 +17,7 @@ interface ButtonLinkProps {
   'aria-label'?: string;
 }
 
-interface ButtonProps {
+export interface ButtonProps {
   children: React.ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -44,6 +44,7 @@ const sizeClasses: Record<ButtonSize, string> = {
   md: 'px-7 py-3.5 text-sm',
   lg: 'px-9 py-4.5 text-sm',
   icon: 'h-8 w-8',
+  default: 'px-4 py-2 text-sm',
 };
 
 const baseClass =
